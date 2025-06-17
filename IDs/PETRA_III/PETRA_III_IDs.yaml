@@ -1,0 +1,25 @@
+IDs:
+
+  - name: "PETRA P01"
+    ring: "PETRA III 10m"             ### 10m straight section
+    minimum_gap: 12.5                 ### In mm
+    periods: 137
+    period_length: 36.0               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 10.13
+      B: -3.733
+      C: 0.41372
+      LU: 36.0
+
+    date: 2025-06-17                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
+    reference3: "10.1088/1742-6596/3010/1/012049"
+
+
+
+
+
+
