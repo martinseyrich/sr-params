@@ -1,0 +1,1 @@
+Put any json files containing data of insertion devices here. You can create subdirectories as you please. Everything will be crawled and combined during the compilation stage.
