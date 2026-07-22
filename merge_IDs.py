@@ -1,0 +1,186 @@
+#!/usr/bin/env python3
+"""
+Crawl a directory tree (e.g. a folder called "IDs") for YAML parameter files
+and combine them into a single YAML file.
+
+Rules:
+- Only files ending in .yaml or .yml are considered; everything else is
+  ignored.
+- A YAML file is only used if its parsed top-level content is a mapping
+  containing an "IDs" key (i.e. "IDs" is the document root). Files without
+  this root key are ignored.
+- Entries are matched by their "name" field. If two entries share the same
+  name, the "date" field is inspected and only the entry with the newer date
+  is kept.
+- If both "name" and "date" are identical between two entries, a warning is
+  printed and the first-encountered entry is kept.
+- File traversal order is sorted (stable/reproducible), so ties resolve the
+  same way on every run.
+
+Usage:
+    python combine_ids.py <input_dir> <output_file.yaml>
+"""
+
+import argparse
+import sys
+from datetime import date, datetime
+from pathlib import Path
+
+import yaml
+
+
+def parse_date(value):
+    """Normalize a date field into a `datetime.date` for comparison.
+
+    PyYAML auto-parses unquoted ISO dates (YYYY-MM-DD) into `datetime.date`
+    objects already. This also copes with the date being given as a plain
+    (possibly quoted) string, or being missing entirely.
+    """
+    if value is None:
+        return None
+    if isinstance(value, date):
+        return value
+    if isinstance(value, datetime):
+        return value.date()
+    if isinstance(value, str):
+        for fmt in ("%Y-%m-%d", "%Y/%m/%d"):
+            try:
+                return datetime.strptime(value.strip(), fmt).date()
+            except ValueError:
+                continue
+    return None
+
+
+def find_yaml_files(root: Path):
+    """Recursively find all .yaml/.yml files under root, in stable sorted order."""
+    files = [
+        p for p in root.rglob("*")
+        if p.is_file() and p.suffix.lower() in (".yaml", ".yml")
+    ]
+    return sorted(files)
+
+
+def load_ids_from_file(path: Path):
+    """Load a YAML file and return its list of ID entries, or None if not applicable."""
+    try:
+        with path.open("r", encoding="utf-8") as f:
+            data = yaml.safe_load(f)
+    except yaml.YAMLError as e:
+        print(f"WARNING: skipping '{path}' - could not parse YAML ({e})", file=sys.stderr)
+        return None
+    except OSError as e:
+        print(f"WARNING: skipping '{path}' - could not read file ({e})", file=sys.stderr)
+        return None
+
+    if not isinstance(data, dict) or "IDs" not in data:
+        # Root key isn't "IDs" -> not one of our parameter files, ignore silently
+        return None
+
+    ids = data["IDs"]
+    if not isinstance(ids, list):
+        print(f"WARNING: skipping '{path}' - 'IDs' key is not a list", file=sys.stderr)
+        return None
+
+    return ids
+
+
+def combine(root: Path):
+    combined = {}       # name -> entry dict
+    combined_meta = {}  # name -> (date_or_None, source_path)
+
+    for path in find_yaml_files(root):
+        ids = load_ids_from_file(path)
+        if not ids:
+            continue
+
+        for entry in ids:
+            if not isinstance(entry, dict) or "name" not in entry:
+                print(f"WARNING: skipping malformed entry (missing 'name') in '{path}'", file=sys.stderr)
+                continue
+
+            name = entry["name"]
+            entry_date = parse_date(entry.get("date"))
+
+            if name not in combined:
+                combined[name] = entry
+                combined_meta[name] = (entry_date, path)
+                continue
+
+            existing_date, existing_path = combined_meta[name]
+
+            if entry_date is None or existing_date is None:
+                print(
+                    f"WARNING: duplicate name '{name}' found in '{existing_path}' and "
+                    f"'{path}' but at least one entry has a missing/unparseable date; "
+                    f"keeping the entry from '{existing_path}'.",
+                    file=sys.stderr,
+                )
+                continue
+
+            if entry_date == existing_date:
+                print(
+                    f"WARNING: duplicate entry for name '{name}' with identical date "
+                    f"'{entry_date}' found in both '{existing_path}' and '{path}'. "
+                    f"Keeping the entry from '{existing_path}'.",
+                    file=sys.stderr,
+                )
+                continue
+
+            if entry_date > existing_date:
+                combined[name] = entry
+                combined_meta[name] = (entry_date, path)
+            # else: existing entry is newer -> keep it, discard this one
+
+    return list(combined.values())
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Crawl a directory of YAML parameter files (rooted under an "
+                    "'IDs' key) and combine them into a single YAML file, resolving "
+                    "name clashes by keeping the entry with the newest 'date'."
+    )
+    parser.add_argument("input_dir", type=Path, help="Root directory to crawl (e.g. 'IDs')")
+    parser.add_argument("output_file", type=Path, help="Path to write the combined YAML file to")
+    args = parser.parse_args()
+
+    if not args.input_dir.is_dir():
+        print(f"ERROR: '{args.input_dir}' is not a directory", file=sys.stderr)
+        sys.exit(1)
+
+    entries = combine(args.input_dir)
+    entries.sort(key=lambda e: str(e.get("name", "")))
+
+    output_data = {"IDs": entries}
+
+    header = (
+        "### =========================================================================\n"
+        "### THIS FILE IS MACHINE GENERATED - DO NOT EDIT IT BY HAND.\n"
+        "###\n"
+        "### Any manual changes made here will be silently overwritten the next time\n"
+        "### this file is regenerated. To change the data, edit the individual source\n"
+        "### files instead (the per-beamline/per-device YAML files under the 'IDs'\n"
+        "### directory tree), then regenerate this file.\n"
+        "###\n"
+        "### HOW TO REGENERATE THIS FILE\n"
+        "###   1. Edit or add the relevant source YAML file(s) under the 'IDs'\n"
+        "###      directory (subdirectories are searched too). Each source file must\n"
+        "###      have 'IDs:' as its top-level key and a 'date:' field on every\n"
+        "###      entry, since the newest 'date' wins if the same 'name' appears in\n"
+        "###      more than one source file.\n"
+        "###   2. Run the generator script from the command line:\n"
+        f"###        python combine_ids.py {args.input_dir} {args.output_file}\n"
+        "###   3. Check the script's console output for warnings (e.g. duplicate\n"
+        "###      name+date clashes) and resolve them in the source files if needed.\n"
+        "### =========================================================================\n\n"
+    )
+
+    with args.output_file.open("w", encoding="utf-8") as f:
+        f.write(header)
+        yaml.safe_dump(output_data, f, sort_keys=False, allow_unicode=True, default_flow_style=False)
+
+    print(f"Combined {len(entries)} unique entries into '{args.output_file}'.")
+
+
+if __name__ == "__main__":
+    main()
