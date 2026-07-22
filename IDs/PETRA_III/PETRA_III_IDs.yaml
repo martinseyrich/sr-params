@@ -18,8 +18,383 @@ IDs:
     reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
     reference3: "10.1088/1742-6596/3010/1/012049"
 
+    beamline_name: "High Resolution Dynamics Beamline"
+    comment: "One of two identical insertion devices in line."
 
 
+  - name: "PETRA P02"
+    ring: "PETRA III 5m"              ### 5m straight section
+    minimum_gap: 9.5                  ### In mm
+    periods: 84
+    period_length: 23.0               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 5.8368
+      B: -3.4729
+      C: 0.19491
+      LU: 23.0
+
+    date: 2026-07-09                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
+    reference3: "https://photon-science.desy.de/facilities/petra_iii/beamlines/p021_powder_diffraction_and_total_scattering_beamline/unified_data_sheet/index_eng.html"
+
+    beamline_name: "Powder Diffraction and Total Scattering / Extreme Conditions Beamline"
+    comment: "P02.1 and P02.2 share their insertion device"
 
 
+  - name: "PETRA P03"
+    ring: "PETRA III 5m"              ### 5m straight section
+    minimum_gap: 9.5                  ### In mm
+    periods: 67
+    period_length: 29.0               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 6.8358
+      B: -3.38148
+      C: 0.15010
+      LU: 29.0
+
+    date: 2026-07-09                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
+    reference3: "https://photon-science.desy.de/facilities/petra_iii/beamlines/p03_minaxs/unified_data_sheet/index_eng.html"
+
+    beamline_name: "Micro- and Nanofocus X-ray Scattering Beamline"
+    comment: "Beamline says 66 periods, undulator page 67 periods."
+
+
+  - name: "PETRA P05"
+    ring: "PETRA III 5m"              ### 5m straight section
+    minimum_gap: 9.5                  ### In mm
+    periods: 67
+    period_length: 29.0               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 6.7359
+      B: -3.3723
+      C: 0.15653
+      LU: 29.0
+
+    date: 2026-07-09                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
+    reference3: ""
+
+    beamline_name: "Imaging Beamline"
+    comment: "P05 website says U32, which seems to be wrong."
+
+
+  - name: "PETRA P06"
+    ring: "PETRA III 5m"              ### 5m straight section
+    minimum_gap: 9.5                  ### In mm
+    periods: 60
+    period_length: 31.4               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 6.5631
+      B: -3.0448
+      C: -0.23753
+      LU: 31.4
+
+    date: 2026-07-09                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
+    reference3: "https://photon-science.desy.de/facilities/petra_iii/beamlines/p06_hard_x_ray_micro_nano_probe/unified_data_sheet_p06/index_eng.html"
+
+    beamline_name: "Hard X-ray Micro/Nano-Probe Beamline"
+    comment: "Beamline page says 60 periods, Undulator page 61 periods"
+
+
+  - name: "PETRA P07"
+    ring: "PETRA III 5m"              ### 5m straight section
+    minimum_gap: 7.0                  ### In mm
+    periods: 188
+    period_length: 21.2               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 4.9741
+      B: -3.5550
+      C: 0.21280
+      LU: 21.2
+
+    date: 2026-07-15                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
+    reference3: "https://photon-science.desy.de/facilities/petra_iii/beamlines/p07_high_energy_materials_science/unified_data_sheet_p07/index_eng.html"
+
+    beamline_name: "High Energy Materials Science Beamline"
+    comment: "Beamline page says 188 periods, undulator page 185 periods"
+
+
+  - name: "PETRA P08"
+    ring: "PETRA III 5m"              ### 5m straight section
+    minimum_gap: 9.5                  ### In mm
+    periods: 66
+    period_length: 29.0               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 7.2253
+      B: -3.5297
+      C: 0.23594
+      LU: 29.0
+
+    date: 2026-07-15                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
+    reference3: "https://photon-science.desy.de/facilities/petra_iii/beamlines/p08_high_resolution_diffraction/unified_data_sheet_p08/index_eng.html"
+
+    beamline_name: "High Resolution Diffraction Beamline"
+    comment: "Beamline page says 66 periods, Undulator page 67 periods."
+
+
+  - name: "PETRA P09"
+    ring: "PETRA III 5m"              ### 5m straight section
+    minimum_gap: 9.5                  ### In mm
+    periods: 63
+    period_length: 31.4               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 7.2285
+      B: -3.5266
+      C: 0.36212
+      LU: 31.4
+
+    date: 2026-07-15                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
+    reference3: "https://photon-science.desy.de/facilities/petra_iii/beamlines/p09_resonant_diffraction___hiphax/unified_data_sheet_p09/index_eng.html"
+
+    beamline_name: "Resonant Diffraction / HiPhax Beamline"
+    comment: "Beamline page says 63 periods, undulator page 61 periods"
+
+
+  - name: "PETRA P10"
+    ring: "PETRA III 5m"              ### 5m straight section
+    minimum_gap: 9.5                  ### In mm
+    periods: 154
+    period_length: 31.4               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 6.9084
+      B: -3.3646
+      C: 0.17630
+      LU: 31.4
+
+    date: 2026-07-15                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
+    reference3: "https://photon-science.desy.de/facilities/petra_iii/beamlines/p10_coherence_applications/unified_data_sheet_p10/index_eng.html"
+
+    beamline_name: "Coherence Application Beamline"
+    comment: ""
+
+
+  - name: "PETRA P11"
+    ring: "PETRA III 5m"              ### 5m straight section
+    minimum_gap: 9.5                  ### In mm
+    periods: 63
+    period_length: 31.4               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 7.1264
+      B: -3.4683
+      C: 0.32219
+      LU: 31.4
+
+    date: 2026-07-16                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
+    reference3: "https://photon-science.desy.de/facilities/petra_iii/beamlines/p11_bio_imaging_and_diffraction/unified_data_sheet_p11/index_eng.html"
+
+    beamline_name: "High-Throughput Macromolecular Crystallography Beamline"
+    comment: "Beamline page says 63 periods, undulator page 61 periods"
+
+
+  - name: "PETRA P21.1"
+    ring: "PETRA III 10m"              ### 5m straight section
+    minimum_gap: 9.5                  ### In mm
+    periods: 66
+    period_length: 29.0               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 6.5815
+      B: -3.3590
+      C: 0.13472
+      LU: 29.0
+
+    date: 2026-07-16                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
+    reference3: "https://photon-science.desy.de/facilities/petra_iii/beamlines/p211_high_energy_x_ray_diffraction/unified_data_sheet_p211/index_eng.html"
+
+    beamline_name: "High Energy X-ray Diffraction Swedish Beamline"
+    comment: "Beamline page says 66 periods, undulator page 67 periods"
+
+
+  - name: "PETRA P21.2"
+    ring: "PETRA III 10m"              ### 5m straight section
+    minimum_gap: 7.0                  ### In mm
+    periods: 185
+    period_length: 21.2               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 4.9791
+      B: -3.5802
+      C: 0.24516
+      LU: 21.2
+
+    date: 2026-07-16                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
+    reference3: "https://photon-science.desy.de/facilities/petra_iii/beamlines/p212_diffraction__imaging/unified_data_sheet_p212/index_eng.html"
+
+    beamline_name: "Diffraction and Imaging Swedish Beamline"
+    comment: ""
+
+
+  - name: "PETRA P22"
+    ring: "PETRA III 5m"              ### 5m straight section
+    minimum_gap: 9.5                  ### In mm
+    periods: 58
+    period_length: 32.8               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 8.6181
+      B: -3.6804
+      C: 0.42980
+      LU: 32.8
+
+    date: 2026-07-16                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
+    reference3: "https://photon-science.desy.de/facilities/petra_iii/beamlines/p22_haxpes/unified_data_sheet/index_eng.html"
+
+    beamline_name: "Hard X-ray Photoelectron Spectroscopy Beamline"
+    comment: ""
+
+
+  - name: "PETRA P23"
+    ring: "PETRA III 5m"              ### 5m straight section
+    minimum_gap: 9.5                  ### In mm
+    periods: 63
+    period_length: 31.4               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 7.9799
+      B: -3.6206
+      C: 0.44207
+      LU: 31.4
+
+    date: 2026-07-16                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
+    reference3: "https://photon-science.desy.de/facilities/petra_iii/beamlines/p23_in_situ_x_ray_diffraction_and_imaging/unified_data_sheet_p23/index_eng.html"
+
+    beamline_name: "In-situ X-ray Diffraction and Imaging Beamline"
+    comment: "Beamline page says 63 periods, undulator page 61 periods"
+
+
+  - name: "PETRA P24"
+    ring: "PETRA III 5m"              ### 5m straight section
+    minimum_gap: 9.5                  ### In mm
+    periods: 66
+    period_length: 29.0               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 7.6315
+      B: -3.5277
+      C: 0.22369
+      LU: 29.0
+
+    date: 2026-07-16                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
+    reference3: "https://photon-science.desy.de/facilities/petra_iii/beamlines/p24_chemical_crystallography/beamline/index_eng.html"
+
+    beamline_name: "Chemical Crystallography Beamline"
+    comment: "Beamline page says 66 periods, undulator page 67 periods"
+
+
+  - name: "PETRA P62"
+    ring: "PETRA III 5m"              ### 5m straight section
+    minimum_gap: 9.5                  ### In mm
+    periods: 61
+    period_length: 31.4               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 7.6981
+      B: -3.4221
+      C: 0.17557
+      LU: 31.4
+
+    date: 2026-07-16                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
+    reference3: "https://photon-science.desy.de/facilities/petra_iii/beamlines/p62_saxsmat/unified_data_sheet/index_eng.html"
+
+    beamline_name: "Chemical Crystallography Beamline"
+    comment: ""
+
+
+  - name: "PETRA P64"
+    ring: "PETRA III 5m"              ### 5m straight section
+    minimum_gap: 9.5                  ### In mm
+    periods: 58
+    period_length: 32.8               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 8.5921
+      B: -3.5469
+      C: 0.24743
+      LU: 32.8
+
+    date: 2026-07-16                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
+    reference3: "https://photon-science.desy.de/facilities/petra_iii/beamlines/p64_advanced_xafs/unified_data_sheet/index_eng.html"
+
+    beamline_name: "X-ray Absorption Spectroscopy Beamline"
+    comment: ""
+
+
+  - name: "PETRA P65"
+    ring: "PETRA III 5m"              ### 5m straight section
+    minimum_gap: 9.5                  ### In mm
+    periods: 11
+    period_length: 32.8               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 8.6096
+      B: -3.5378
+      C: 0.24427
+      LU: 32.8
+
+    date: 2026-07-16                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "https://photon-science.desy.de/research/technical_groups/undulators/undulators_at_petraiii/index_eng.html"
+    reference3: "https://photon-science.desy.de/facilities/petra_iii/beamlines/p65_applied_xafs/unified_data_sheet/index_eng.html"
+
+    beamline_name: "Applied XAFS Beamline"
+    comment: "Yes 11 periods is right. I validated it IRL."
+
+### 11mm out of vacuum minimum gap
+### 6mmm in-vacuum ### Undulator page says 7mm?
 

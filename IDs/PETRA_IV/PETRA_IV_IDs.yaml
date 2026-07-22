@@ -1,0 +1,173 @@
+IDs:
+
+  - name: "PETRA PB11"
+    ring: "PETRA IV"                    ### 10m straight section
+    minimum_gap: 6.0                    ### In mm
+    periods: 222
+    period_length: 18.0                 ### In mm
+    
+    gap_method: "esrf-exp"              ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A1: 3.2077
+      A2: 0.0000
+      A3: 0.9944
+      A4: 1.0771
+      A5: 1.0000
+      A6: 1.1184
+      LU: 18.0
+
+    date: 2025-07-17                  ### Date this entry was created
+    reference1: "https://github.com/oasys-esrf-kit/OASYS2-ESRF-EXTENSIONS/blob/main/orangecontrib/esrf/syned/data/jsrund.csv"
+    reference2: "Beamline CDR v5, last updated 01/05/2025"
+    reference3: ""
+
+    beamline_name: "Nuclear Resonance and X-ray Raman Scattering Beamline"
+    comment: "Beamline desires a CPMU18; values from ESRF CPMU18b are used for this device here."
+
+
+  - name: "PETRA PB12"
+    ring: "PETRA IV"                    ### 5m straight section
+    minimum_gap: 9.5                    ### In mm
+    periods: 67
+    period_length: 29.0                 ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 6.8358
+      B: -3.38148
+      C: 0.15010
+      LU: 29.0
+
+    date: 2025-07-22                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "Beamline CDR v5, last updated 01/05/2025"
+    reference3: ""
+
+    beamline_name: "Advanced Micro Nano X-ray Scattering Beamline"
+    comment: "Undulator parameters copied from comparable PETRA III device. The beamline desires two 2m devices."
+
+
+  - name: "PETRA PB13"
+    ring: "PETRA IV"                    ### 5m straight section
+    minimum_gap: 9.5                    ### In mm
+    periods: 126
+    period_length: 34.0                 ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 8.6181
+      B: -3.6804
+      C: 0.42980
+      LU: 34.0
+
+    date: 2025-07-22                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "Beamline CDR v5, last updated 01/05/2025"
+    reference3: ""
+
+    beamline_name: "High-Resolution Hard X-ray Photoelectron Spectroscopy (HAXPES) Beamline"
+    comment: "Beamline want U34, there is no comparable PETRA III device. Copied values from P22 U33. Desired Kmax is 2.9, to be verified."
+
+
+  - name: "PETRA PB14"
+    ring: "PETRA IV"                    ### 5m straight section
+    minimum_gap: 6.0                    ### In mm
+    periods: 211
+    period_length: 18.0                 ### In mm
+    
+    gap_method: "esrf-exp"              ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A1: 3.2077
+      A2: 0.0000
+      A3: 0.9944
+      A4: 1.0771
+      A5: 1.0000
+      A6: 1.1184
+      LU: 18.0
+
+    date: 2025-07-22                  ### Date this entry was created
+    reference1: "https://github.com/oasys-esrf-kit/OASYS2-ESRF-EXTENSIONS/blob/main/orangecontrib/esrf/syned/data/jsrund.csv"
+    reference2: "Beamline CDR v4, last updated 01/05/2025"
+    reference3: ""
+
+    beamline_name: "High-Energy Scattering and Diffraction Tomography Beamline"
+    comment: "Beamline desires a CPMU18; values from ESRF CPMU18b are used for this device here."
+
+
+  - name: "PETRA PB15"
+    ring: "PETRA IV"                    ### 5m straight section
+    minimum_gap: 6.0                    ### In mm
+    periods: 188
+    period_length: 21.2                 ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 4.9741
+      B: -3.5550
+      C: 0.21280
+      LU: 21.2
+
+    date: 2025-07-22                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "Beamline CDR v5, last updated 01/05/2025"
+    reference3: ""
+
+    beamline_name: "High-Energy Materials Science Beamline"
+    comment: "Parameters taken from comparable PETRA III beamline, but with decreased minimal gap."
+
+
+  - name: "PETRA PB16"
+    ring: "PETRA IV"                    ### 5m straight section
+    minimum_gap: 9.5                  ### In mm
+    periods: 66
+    period_length: 29.0               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 7.2253
+      B: -3.5297
+      C: 0.23594
+      LU: 29.0
+
+    date: 2025-07-22                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "Beamline CDR v5, last updated 01/05/2025"
+    reference3: ""
+
+    beamline_name: "Surface and Interface Dynamics Beamline"
+    comment: "Beamline requests two U29 2m undulators with phase shifter. Here the parameters a single PETRA III 2m device are taken."
+
+
+  - name: "PETRA PB17"
+    ring: "PETRA IV"                  ### 5m straight section
+    minimum_gap: 9.5                  ### In mm
+    periods: 143
+    period_length: 30.0               ### In mm
+    
+    gap_method: "petra3-linear"       ### Gap calculation formula according to Petra3Undulator Tango Server
+    gap_params:
+      A: 7.2253
+      B: -3.5297
+      C: 0.23594
+      LU: 30.0
+
+    date: 2025-07-22                  ### Date this entry was created
+    reference1: "Petra3Undulator.cpp Tango Server"
+    reference2: "Beamline CDR v5, last updated 01/05/2025"
+    reference3: ""
+
+    beamline_name: "In-situ Bragg Microscopy Beamline "
+    comment: "Beamline requests U30 undulator, there no PETRA III equivalent. Parameters here are from U29. Desired Kmax is 2.4, to be verfied."
+
+
+
+
+
+
+
+
+
+
+
+### 11mm out of vacuum minimum gap
+### 6mmm in-vacuum ### Undulator page says 7mm?
