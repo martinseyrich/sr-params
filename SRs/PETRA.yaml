@@ -1,0 +1,55 @@
+SRs:
+
+  - name: "PETRA III 5m"
+  	energy: 6.0						    ### in GeV
+  	energy_spread: 0.1					### in %	
+  	current: 100					    ### In mA
+
+    beamsize_hor:   34.6                ### In um
+    beamsize_ver:   6.3                 ### In um
+    divergence_hor: 28.9                ### In urad
+    divergence_ver: 1.6                 ### In urad
+
+
+    date: 2025-07-29                   ### Date this entry was created
+    reference1: "https://photon-science.desy.de/facilities/petra_iii/machine/parameters/index_eng.html"
+    reference2: ""
+    reference3: ""
+
+    comment: "These are the low beta values"
+
+  - name: "PETRA III 10m"
+  	energy: 6.0						    ### in GeV
+  	energy_spread: 0.1					### in %	
+  	current: 100					    ### In mA
+
+    beamsize_hor:   141.6               ### In um
+    beamsize_ver:   6.6                 ### In um
+    divergence_hor: 7.1                 ### In urad
+    divergence_ver: 1.5                 ### In urad
+
+
+    date: 2025-07-29                   ### Date this entry was created
+    reference1: "https://photon-science.desy.de/facilities/petra_iii/machine/parameters/index_eng.html"
+    reference2: ""
+    reference3: ""
+
+    comment: ""
+
+  - name: "PETRA IV BM"
+  	energy: 6.0						    ### in GeV
+  	energy_spread: 0.1					### in %	
+  	current: 200					    ### In mA
+
+    beamsize_hor:   5.1               ### In um
+    beamsize_ver:   5.1                 ### In um
+    divergence_hor: 2.3                 ### In urad
+    divergence_ver: 2.3                 ### In urad
+
+
+    date: 2025-07-29                   ### Date this entry was created
+    reference1: "PETRA IV EDR, P. 68, draft version Nov 17 2025"
+    reference2: ""
+    reference3: ""
+
+    comment: "Brilliance-mode with fully-coupled mode with round beam"
