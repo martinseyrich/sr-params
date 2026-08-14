@@ -1,9 +1,9 @@
 SRs:
 
   - name: "PETRA III 5m"
-  	energy: 6.0						    ### in GeV
-  	energy_spread: 0.1					### in %	
-  	current: 100					    ### In mA
+    energy: 6.0                            ### in GeV
+    energy_spread: 0.1                    ### in %    
+    current: 100                        ### In mA
 
     beamsize_hor:   34.6                ### In um
     beamsize_ver:   6.3                 ### In um
@@ -19,9 +19,9 @@ SRs:
     comment: "These are the low beta values"
 
   - name: "PETRA III 10m"
-  	energy: 6.0						    ### in GeV
-  	energy_spread: 0.1					### in %	
-  	current: 100					    ### In mA
+    energy: 6.0                            ### in GeV
+    energy_spread: 0.1                    ### in %    
+    current: 100                        ### In mA
 
     beamsize_hor:   141.6               ### In um
     beamsize_ver:   6.6                 ### In um
@@ -37,9 +37,9 @@ SRs:
     comment: ""
 
   - name: "PETRA IV BM"
-  	energy: 6.0						    ### in GeV
-  	energy_spread: 0.1					### in %	
-  	current: 200					    ### In mA
+    energy: 6.0                            ### in GeV
+    energy_spread: 0.1                    ### in %    
+    current: 200                        ### In mA
 
     beamsize_hor:   5.1               ### In um
     beamsize_ver:   5.1                 ### In um
