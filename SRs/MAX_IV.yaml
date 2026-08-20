@@ -1,0 +1,18 @@
+SRs:
+  - name: "MAX IV"
+    energy: 3.0          ### in GeV
+    energy_spread: 0.077   ### in %
+    current: 300        ### In mA
+
+    beamsize_hor: 54     ### In um
+    beamsize_ver: 4     ### In um
+    divergence_hor: 6   ### In urad
+    divergence_ver: 2   ### In urad
+
+
+    date: "2026-08-14"        ### Date this entry was created
+    reference1: "https://journals.iucr.org/s/issues/2021/06/00/ye5008/ye5008.pdf (Johansson et al., J. Synchrotron Rad. 28, 1935-1947 (2021), Table 1)"
+    reference2: "https://www.esrf.fr/files/live/sites/www/files/events/conferences/2022/ESLS%202022/MOLLOY_MAX%20IV_Operation%20%26%20upgrade%20status_economy%20plan.pdf"
+    reference3: ""
+
+    comment: "The numbers for the current are all over the place, 500mA is the design value, the second reference says 300mA is used for regular operation, but at the time of writing the machine status page says 200mA. I use 300mA as this is the value provided by the head of accelerator operation."

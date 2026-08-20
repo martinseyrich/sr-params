@@ -1,0 +1,36 @@
+SRs:
+  - name: "Sirius High β"
+    energy: 3.0          ### in GeV
+    energy_spread: 0.085   ### in %
+    current: 350        ### In mA
+
+    beamsize_hor: 64.9     ### In um
+    beamsize_ver: 3.4     ### In um
+    divergence_hor: 3.8   ### In urad
+    divergence_ver: 0.7   ### In urad
+
+
+    date: "2026-07-29"        ### Date this entry was created
+    reference1: "https://lnls.cnpem.br/accelerators/storage-ring-parameters/"
+    reference2: ""
+    reference3: ""
+
+    comment: "Beam size/divergence at center of the long (7.5 m) straight section SS-A, a high-beta ID source point. Compiled by Claude Sonnet 5.0 (medium), verify before use for important calculations."
+
+  - name: "Sirius Low β"
+    energy: 3.0          ### in GeV
+    energy_spread: 0.085   ### in %
+    current: 350        ### In mA
+
+    beamsize_hor: 19.1     ### In um
+    beamsize_ver: 2.0     ### In um
+    divergence_hor: 13.0   ### In urad
+    divergence_ver: 1.3   ### In urad
+
+
+    date: "2026-07-29"        ### Date this entry was created
+    reference1: "https://lnls.cnpem.br/accelerators/storage-ring-parameters/"
+    reference2: ""
+    reference3: ""
+
+    comment: "Beam size/divergence at center of the short (6.5 m) straight section SS-B, a low-beta ID source point. Compiled by Claude Sonnet 5.0 (medium), verify before use for important calculations."

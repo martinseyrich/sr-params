@@ -1,9 +1,9 @@
 SRs:
 
   - name: "PETRA III 5m"
-  	energy: 6.0						    ### in GeV
-  	energy_spread: 0.1					### in %	
-  	current: 100					    ### In mA
+    energy: 6.0                            ### in GeV
+    energy_spread: 0.1                    ### in %    
+    current: 100                        ### In mA
 
     beamsize_hor:   34.6                ### In um
     beamsize_ver:   6.3                 ### In um
@@ -19,9 +19,9 @@ SRs:
     comment: "These are the low beta values"
 
   - name: "PETRA III 10m"
-  	energy: 6.0						    ### in GeV
-  	energy_spread: 0.1					### in %	
-  	current: 100					    ### In mA
+    energy: 6.0                            ### in GeV
+    energy_spread: 0.1                    ### in %    
+    current: 100                        ### In mA
 
     beamsize_hor:   141.6               ### In um
     beamsize_ver:   6.6                 ### In um
@@ -37,9 +37,9 @@ SRs:
     comment: ""
 
   - name: "PETRA IV BM"
-  	energy: 6.0						    ### in GeV
-  	energy_spread: 0.1					### in %	
-  	current: 200					    ### In mA
+    energy: 6.0                            ### in GeV
+    energy_spread: 0.1                    ### in %    
+    current: 200                        ### In mA
 
     beamsize_hor:   5.1               ### In um
     beamsize_ver:   5.1                 ### In um
@@ -53,3 +53,21 @@ SRs:
     reference3: ""
 
     comment: "Brilliance-mode with fully-coupled mode with round beam"
+
+  - name: "PETRA II"
+    energy: 12.0          ### in GeV
+    energy_spread: 0.1   ### in %
+    current: 60        ### In mA
+
+    beamsize_hor: 600     ### In um
+    beamsize_ver: 100     ### In um
+    divergence_hor: 24   ### In urad
+    divergence_ver: 4.2   ### In urad
+
+
+    date: "2026-08-06"        ### Date this entry was created
+    reference1: "https://proceedings.jacow.org/p95/ARTICLES/FAR/FAR07.PDF (Balewski et al., PAC 1995, Table 1)"
+    reference2: ""
+    reference3: ""
+
+    comment: "DESY PETRA storage ring operated parasitically (during HERA-injector idle time) as a synchrotron radiation source from 1995-2007, using a single hard X-ray undulator (33 mm period) in straight section North East; this is the ring later rebuilt into PETRA III. Horizontal emittance 18 nm rad at 12 GeV with the low-emittance optic, 3% emittance coupling. Current: up to 55-60 mA design; energy spread not given in this source (assumed value is used here). Values are for the low-emittance undulator optic (as opposed to the standard 45-degree-phase-advance injection optic used for HERA injection, which had 18 nm rad emittance at 7 GeV). Compiled by Claude Sonnet 5.0 (medium), verify before use for important calculations."

@@ -22,11 +22,38 @@ Usage:
 """
 
 import argparse
+import re
 import sys
 from datetime import date, datetime
 from pathlib import Path
 
 import yaml
+
+# Matches names like "PETRA PB11" or "PETRA PB31a" (group 0: PB-series,
+# sorted by number, then by the optional trailing letter suffix)
+_PB_RE = re.compile(r"^PETRA PB(\d+)([a-zA-Z]*)")
+# Matches names like "PETRA P34" or "PETRA P31b" (group 1: P-series,
+# sorted by number, then by the optional trailing letter suffix)
+_P_RE = re.compile(r"^PETRA P(\d+)([a-zA-Z]*)")
+
+
+def sort_key(entry):
+    """Sort entries: PETRA PBxx (ascending xx, then by any letter suffix like
+    'a'/'b'), then PETRA Pxx (same rule), then everything else in plain
+    alphanumeric order."""
+    name = str(entry.get("name", ""))
+
+    match = _PB_RE.match(name)
+    if match:
+        number, suffix = match.groups()
+        return (0, int(number), suffix.lower(), name)
+
+    match = _P_RE.match(name)
+    if match:
+        number, suffix = match.groups()
+        return (1, int(number), suffix.lower(), name)
+
+    return (2, 0, "", name)
 
 
 def parse_date(value):
@@ -149,7 +176,7 @@ def main():
         sys.exit(1)
 
     entries = combine(args.input_dir)
-    entries.sort(key=lambda e: str(e.get("name", "")))
+    entries.sort(key=sort_key)
 
     output_data = {"IDs": entries}
 

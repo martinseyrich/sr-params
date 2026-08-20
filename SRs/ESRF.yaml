@@ -1,0 +1,18 @@
+SRs:
+  - name: "ESRF-EBS"
+    energy: 6.0          ### in GeV
+    energy_spread: 0.093   ### in %
+    current: 200        ### In mA
+
+    beamsize_hor: 30.18     ### In um
+    beamsize_ver: 4.37     ### In um
+    divergence_hor: 3.64   ### In urad
+    divergence_ver: 1.37   ### In urad
+
+
+    date: "2026-07-29"        ### Date this entry was created
+    reference1: "https://arxiv.org/pdf/1906.07100 (Table 4)"
+    reference2: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.27.051601"
+    reference3: ""
+
+    comment: "Electron beam parameters at the center of the ID straight section (EBS lattice S28D); energy spread from ESRF-EBS Technical Report (9.3e-4). Compiled by Claude Sonnet 5.0 (medium), verify before use for important calculations."

@@ -1,0 +1,18 @@
+SRs:
+  - name: "DORIS III"
+    energy: 4.5          ### in GeV
+    energy_spread: 0.11   ### in %
+    current: 140        ### In mA
+
+    beamsize_hor: 3046.0     ### In um
+    beamsize_ver: 350.9     ### In um
+    divergence_hor: 134.6   ### In urad
+    divergence_ver: 34.2   ### In urad
+
+
+    date: "2026-08-06"        ### Date this entry was created
+    reference1: "https://cerncourier.com/a/the-three-lives-of-doris-from-charm-quarks-to-cell-biology/"
+    reference2: "https://accelconf.web.cern.ch/p95/ARTICLES/FAA/FAA02.PDF (Nesemann et al., EPAC 1996)"
+    reference3: ""
+
+    comment: "The beta_x = 22.63 m and beta_y = 10.26 m values at an undulator-favored straight section with closed Wigglers were obtained E. Weckert with a custom RAG of internal documents. The remaining entries were retrieved by Claude Sonnet 5.0 (medium). These values require verification before being used for any serious calculation."

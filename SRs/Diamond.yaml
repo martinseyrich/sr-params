@@ -1,0 +1,17 @@
+SRs:
+  - name: "Diamond"
+    energy: 3.0          ### in GeV
+    energy_spread: 0.1   ### in %
+    current: 300        ### In mA
+
+    beamsize_hor: 123     ### In um
+    beamsize_ver: 6     ### In um
+    divergence_hor: 24   ### In urad
+    divergence_ver: 4   ### In urad
+
+    date: "2026-07-29"        ### Date this entry was created
+    reference1: "https://cas.web.cern.ch/sites/default/files/lectures/daresbury-2007/r-walker-diamond.pdf"
+    reference2: ""
+    reference3: ""
+
+    comment: "Original Diamond design values at centre of a 5 m ID straight section (7 mm ID gap), from R. Walker (Diamond Technical Director), CAS 2007. Diamond has since been operating with various lattice/current updates and is planned to be replaced by Diamond-II; these values are historical design figures, not necessarily current operational values. Energy spread was not provided and is assumed from similar sources."
