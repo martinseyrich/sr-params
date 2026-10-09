@@ -1,8 +1,9 @@
+
 SRs:
 
   - name: "PETRA III 5m"
-    energy: 6.0                            ### in GeV
-    energy_spread: 0.1                    ### in %    
+    energy: 6.0                         ### in GeV
+    energy_spread: 0.1                  ### in %    
     current: 100                        ### In mA
 
     beamsize_hor:   34.6                ### In um
@@ -36,7 +37,7 @@ SRs:
 
     comment: ""
 
-  - name: "PETRA IV BM"
+  - name: "PETRA IV BM 5m"
     energy: 6.0                            ### in GeV
     energy_spread: 0.1                    ### in %    
     current: 200                        ### In mA
@@ -47,12 +48,67 @@ SRs:
     divergence_ver: 2.3                 ### In urad
 
 
-    date: 2025-07-29                   ### Date this entry was created
-    reference1: "PETRA IV EDR, P. 68, draft version Nov 17 2025"
+    date: 2026-10-09                    ### Date this entry was created
+    reference1: "PETRA IV EDR, P. 46 and P. 68, draft version Nov 17 2025"
     reference2: ""
     reference3: ""
 
-    comment: "Brilliance-mode with fully-coupled mode with round beam"
+    comment: "PETRA IV Brilliance Mode, fully-coupled, in 5m straight sections (4.3m usable ID length)"
+
+
+  - name: "PETRA IV BM 10m"
+    energy: 6.0                            ### in GeV
+    energy_spread: 0.1                    ### in %    
+    current: 200                        ### In mA
+
+    beamsize_hor:   6.9               ### In um
+    beamsize_ver:   6.9                 ### In um
+    divergence_hor: 1.7                 ### In urad
+    divergence_ver: 1.7                 ### In urad
+
+
+    date: 2026-10-09                  ### Date this entry was created
+    reference1: "PETRA IV EDR, P. 46 and P. 68, draft version Nov 17 2025"
+    reference2: ""
+    reference3: ""
+
+    comment: "PETRA IV Brilliance Mode, fully-coupled, in 10m (?) long straight sections"
+
+  - name: "PETRA IV TM 5m"
+    energy: 6.0                            ### in GeV
+    energy_spread: 0.1                    ### in %    
+    current: 80                        ### In mA
+
+    beamsize_hor:   5.1               ### In um
+    beamsize_ver:   5.1                 ### In um
+    divergence_hor: 2.3                 ### In urad
+    divergence_ver: 2.3                 ### In urad
+
+
+    date: 2026-10-09                   ### Date this entry was created
+    reference1: "PETRA IV EDR, P. 46 and P. 68, draft version Nov 17 2025"
+    reference2: ""
+    reference3: ""
+
+    comment: "PETRA IV Timing Mode, fully-coupled, in 5m straight sections (4.3m usable ID length)"
+
+  - name: "PETRA IV BM 10m"
+    energy: 6.0                            ### in GeV
+    energy_spread: 0.1                    ### in %    
+    current: 80                        ### In mA
+
+    beamsize_hor:   6.9               ### In um
+    beamsize_ver:   6.9                 ### In um
+    divergence_hor: 1.7                 ### In urad
+    divergence_ver: 1.7                 ### In urad
+
+
+    date: 2026-10-09                ### Date this entry was created
+    reference1: "PETRA IV EDR, P. 46 and P. 68, draft version Nov 17 2025"
+    reference2: ""
+    reference3: ""
+
+    comment: "PETRA IV Timing Mode, fully-coupled, in 10m (?) long straight sections"
 
   - name: "PETRA II"
     energy: 12.0          ### in GeV
